@@ -1,0 +1,1788 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@300;400;500;700&display=swap"
+        rel="stylesheet">
+    
+    <title>Nivelamento - Língua Portuguesa Nível 2 - Unidade 1</title>
+<style>
+    /* Global styles */
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden; /* Oculta rolagem horizontal */
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+    
+        .titulo-programa {
+            font-family: 'Bebas Neue', cursive;
+            font-size: 70px;
+            color: #003974;
+            font-weight: lighter;
+        }
+
+        .titulo-materia {
+            font-family: 'Bebas Neue', cursive;
+            font-size: 133px;
+            color: #003974;
+            font-weight: lighter;
+        }
+
+        .subtitulo-professor {
+            font-family: 'Bebas Neue', cursive;
+            font-size: 59px;
+            color: #0058B4;
+            font-weight: lighter;
+        }
+
+        .titulo-unidade {
+            font-family: 'Bebas Neue', cursive;
+            font-size: 60px;
+        }
+
+        .titulo-saiba-mais {
+            font-family: 'Bebas Neue', cursive;
+            font-size: 70px;
+        }
+        /* Estilização de Bebas Neue FIM */
+
+
+        /* Estilização de Roboto INICIO */
+        .peso-1 {
+            font-family: 'Roboto', sans-serif;
+            font-size: 45px;
+        }
+
+        .texto {
+            font-family: 'Roboto', sans-serif;
+            font-size: 35px;
+        }
+
+        .sub-texto {
+            font-family: 'Roboto', sans-serif;
+            font-size: 25px;
+        }
+
+        .titulo-box {
+            font-family: 'Roboto', sans-serif;
+            font-size: 32px;
+        }
+
+        .fonte {
+            font-family: 'Roboto', sans-serif;
+            font-size: 25px;
+        }
+
+        .citacao {
+            font-family: 'Roboto', sans-serif;
+            font-size: 30px;
+            font-style: italic;
+        }
+
+        .referencias {
+            font-family: 'Roboto', sans-serif;
+            font-size: 35px;
+        }
+
+        /* Estilização de Roboto FIM */
+        /* Navbar styles INICIO */
+        .navbar {
+            background-color: #9F43BE;
+            color: #fff;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px;
+            position: -webkit-sticky; /* Para navegadores antigos */
+            position: sticky; /* Para manter no topo durante o scroll */
+            top: 0; /* Faz com que a navbar fique no topo */
+            z-index: 10; /* Garante que o menu fique acima de outros elementos */
+            transition: background-color 0.3s ease; /* Transição suave para o efeito */
+        }
+
+        .navbar .logo img {
+            height: 50px;/* Ajuste conforme necessário */
+            width: auto;
+        }
+
+        .navbar .menu-toggle {
+            cursor: pointer;
+            font-size: 1.5em;
+            display: block;
+        }
+
+        .navbar ul {
+            list-style: none;
+            display: none;
+            flex-direction: column;
+            background-color: #9f43be;
+            position: absolute;
+            top: 60px;
+            right: 0;
+            width: 200px;
+            height: auto;
+            border-radius: 5px;
+            z-index: 10; /* Garante que o menu esteja acima de outros elementos */
+        }
+
+        .navbar ul.show {
+            display: flex;
+        }
+
+        .navbar ul li {
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .navbar ul li a {
+            color: #fff;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        .navbar ul li a:hover {
+            color: #003974; /* Cor ao passar o mouse */
+        }
+        .navbar .menu-toggle i:last-child {
+            display: none; /* Esconde o ícone de fechar inicialmente */
+        }
+        
+
+         /* Navbar styles FIM */
+
+        /* Titulo styles INICIO */
+        .titulo-intro {
+            display: flex;
+            justify-content: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        .titulo-intro h1 {
+            margin: 0;
+            padding: 15px;
+        }
+        /* Titulo styles FIM */
+
+        /* Estilo da Capa do Livro INICIO*/
+        .capa-livro {
+            position: relative;
+            height: 500px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            overflow: hidden; /* Para evitar que o pseudoelemento saia do container */
+            border-top: 3px solid #003974;
+            border-bottom: 3px solid #003974;
+        }
+
+        .capa-livro::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('https://res.cloudinary.com/di4ria1pf/image/upload/v1741784872/xw24i9yzlzfsicthkntq.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            opacity: 0.2; /* Controle da opacidade */
+            z-index: -1; /* Coloca o background atrás do conteúdo */
+        }
+
+        
+
+        .capa-livro .conteudo-capa {
+            text-align: center;
+            color: white;
+            padding: 20px; /* Espaço interno para o texto */
+        }
+
+        .capa-livro .titulo-materia {
+            font-size: 80px;
+            font-family: 'Bebas Neue', cursive;
+            margin: 0;
+        }
+
+        .capa-livro .subtitulo-professor {
+            font-size: 40px;
+            font-family: 'Bebas Neue', cursive;
+            margin: 10px 0 0;
+        }
+        /* Estilo da Capa do Livro FIM*/
+
+        /* Barra Superior */
+        .barra-superior {
+            background-color: #015A42; /* Cor verde escuro */
+            width: 100%;
+            padding: 15px 15px;
+            text-align: center;
+            box-sizing: border-box; /* Inclui padding e bordas no cálculo da largura */
+            overflow-x: hidden; /* Previne rolagem horizontal */
+        }
+
+        .barra-superior .titulo-barra {
+            font-family: 'Bebas Neue', cursive;
+            color: #FFF; /* Cor branca */
+            font-size: 50px;
+            font-weight: lighter;
+            margin: 0;
+        }
+
+        /* Conteúdo da Introdução */
+        .introducao {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 0;
+            margin-top: 100px;
+            background-color: #E2F4EB; /* Fundo neutro */
+            overflow-x: hidden; /* Impede rolagem horizontal */
+        }
+        
+        .introducao .titulo-introducao {
+            font-family: 'Bebas Neue', cursive;
+            font-size: 50px;
+            font-weight: lighter;
+            color: #015A42; /* Cor verde */
+            margin: 10px auto 10px auto;
+        }
+
+        .introducao .caixa-texto {
+            background-color: #E2F4EB; /* Verde mais claro */
+            padding: 20px;
+            width: 100%;
+            max-width: 800px;
+        }
+
+        .introducao .caixa-texto p {
+            font-family: 'Roboto', sans-serif;
+            font-size: 19px;
+            line-height: 1.6;
+            text-align: justify;
+            color: #333;
+            margin-bottom: 15px;
+        }
+
+        /* RESPONSIVIDADE SEÇÕES ACIMA*/
+        /* Capa do Livro - Responsividade */
+        @media (max-width: 768px) {
+            .capa-livro {
+                height: 350px; /* Reduz a altura da capa */
+                padding: 20px; /* Ajusta o espaçamento interno */
+            }
+
+            .capa-livro .titulo-materia {
+                font-size: 50px; /* Reduz o tamanho do título */
+            }
+
+            .capa-livro .subtitulo-professor {
+                font-size: 30px; /* Reduz o tamanho do subtítulo */
+            }
+
+            .capa-livro .conteudo-capa {
+                padding: 15px; /* Ajusta o padding para telas menores */
+            }
+        }   
+            /* Seção Introdução - Responsividade */
+        @media (max-width: 768px) {
+            .barra-superior {
+                padding: 10px; /* Reduz o padding da barra */
+            }
+
+            .barra-superior .titulo-barra {
+                font-size: 1.8rem; /* Reduz o tamanho do título na barra */
+            }
+
+            .introducao .titulo-introducao {
+                font-size: 2.8rem; /* Reduz o tamanho do título da introdução */
+                margin-top: 20px; /* Ajusta o espaçamento superior */
+            }
+
+            .introducao .caixa-texto {
+                padding: 20px; /* Reduz o padding da caixa de texto */
+                width: 90%; /* Ajusta a largura da caixa */
+            }
+
+            .introducao .caixa-texto p {
+                font-size: 1.2rem; /* Reduz o tamanho do texto */
+                line-height: 1.4;
+                margin-bottom: 10px; /* Ajusta a margem entre os parágrafos */
+            }
+        }
+        /* Responsividade para o título da seção de Programa */
+        @media (max-width: 768px) {
+            .titulo-programa {
+                font-size: 50px; /* Ajuste do tamanho do título */
+            }
+        }
+
+        @media (max-width: 480px) {
+            .titulo-programa {
+                font-size: 35px; /* Ajuste para telas muito pequenas */
+            }
+        }
+        .text-right {
+            display: inline-block; /* Evita que a span force um bloco separado */
+            text-align: right;
+            font-style: italic;
+            font-size: 16px;
+        }
+        .text-italicf {
+            font-style: italic; /* Transforma o texto em itálico */
+            font-size: 13px;
+        }
+        /* Título da seção */
+        .secao1 {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #9f43be11;
+            padding: 20px;  
+        }
+
+        .secao1 h1 {
+            font-size: 25px;
+            font-family: 'Roboto', sans-serif;
+            color: #015A42; /* Cor verde */
+            width: 90%;
+            margin: 20px auto;
+            max-width: 800px;
+            text-align: left;
+            
+        }
+
+        .secao1 p {
+            font-size: 19px;
+            text-align: justify;
+            line-height: 1.6;
+            color: #333;
+            margin: 20px auto;
+            width: 90%; /* Ajuste de largura */
+            max-width: 800px; /* Limite máximo */
+        }
+        .secao1 li{
+            font-size: 17px;
+            line-height: 1.6;
+            text-align: justify;
+            margin: 20px auto;
+            width: 90%; /* Ajuste de largura */
+            max-width: 800px; /* Limite máximo */
+        }
+        /* Estilo responsivo para telas menores */
+        @media (max-width: 768px) {
+            .secao1 h1 {
+                font-size: 1.5rem;
+                text-align: left;
+            }
+
+            .secao1 p {
+                font-size: 0.9rem;
+                line-height: 1.4;
+            }
+
+        }
+        @media (max-width: 480px) {
+            .secao1 h1 {
+                font-size: 1.5rem;
+            }
+
+            .secao1 p {
+                font-size: 1.2rem;
+            } 
+        }
+        /* Título da seção */
+        .secao2 {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #FFF;
+            padding: 20px;  
+        }
+
+        .secao2 h1 {
+            font-size: 25px;
+            font-family: 'Roboto', sans-serif;
+            color: #015A42; /* Cor verde */
+            width: 90%;
+            margin: 20px auto;
+            max-width: 800px;
+            text-align: left;
+        }
+
+        .secao2 p {
+            font-size: 19px;
+            text-align: justify;
+            line-height: 1.6;
+            color: #333;
+            margin: 20px auto;
+            width: 90%; /* Ajuste de largura */
+            max-width: 800px; /* Limite máximo */
+        }
+        .secao2 li{
+            font-size: 17px;
+            line-height: 1.6;
+            text-align: justify;
+            margin: 10px auto;
+            width: 90%; /* Ajuste de largura */
+            max-width: 800px; /* Limite máximo */
+        }
+        /* Estilo responsivo para telas menores */
+        @media (max-width: 768px) {
+            .secao2 h1 {
+                font-size: 1.5rem;
+                text-align: left;
+            }
+
+            .secao2 p {
+                font-size: 0.9rem;
+                line-height: 1.4;
+            }
+
+        }
+        @media (max-width: 480px) {
+            .secao2 h1 {
+                font-size: 1.5rem;
+            }
+
+            .secao2 p {
+                font-size: 1.2rem;
+            } 
+        }
+        /* Container principal */
+        .container-box {
+            background-color: #fff; /* Fundo branco */
+            border: 2px solid #9F43BE; /* Borda violeta */
+            border-radius: 10px; /* Cantos arredondados */
+            padding: 20px; /* Espaçamento interno */
+            width: 90%;
+            max-width: 800px; /* Limite de largura */
+            margin: 20px auto; /* Centralizar */
+        }
+        .container-box p {
+            margin: 0; /* Remove a margem herdada */
+            padding: 5px;
+            width: 100%; /* Faz o texto ocupar todo o espaço disponível */
+        }
+
+        /* Layout da imagem + texto */
+        .content {
+            display: flex;
+            align-items: stretch; /* Faz com que imagem e texto ocupem o mesmo espaço vertical */
+            justify-content: space-between;
+            gap: 20px; /* Espaço entre os elementos */
+        }
+
+        /* Imagem */
+        .content img {
+            width: 350px; /* Ajuste do tamanho da imagem */
+            height: auto;
+            border-radius: 5px; /* Pequeno arredondamento */
+            object-fit: cover; /* Garante que a imagem preencha seu espaço sem distorcer */
+        }
+
+        /* Texto */
+        .textimg {
+            font-family: 'Roboto', sans-serif !important;
+            font-size: 16px !important;
+            line-height: 1.5 !important;
+            flex: 1 !important; /* O texto ocupa o espaço restante */
+            text-align: justify;
+            height: 100%; /* Faz com que o bloco de texto tenha a mesma altura da imagem */
+        }
+
+        /* Descrição abaixo da imagem */
+        .description {
+            font-family: 'Roboto', sans-serif;
+            font-size: 14px;
+            margin-top: 10px;
+            text-align: justify; /* Melhor alinhamento */
+        }
+
+        /* 🔹 Responsividade 🔹 */
+        @media (max-width: 768px) {
+            .content {
+                flex-direction: column !important; /* Empilha imagem e texto */
+                align-items: center;
+                text-align: center !important;
+            }
+
+            .container-box {
+                width: 85%; /* Reduz a largura em telas médias */
+                max-width: 400px; /* Define um limite para não ficar muito grande */
+            }
+
+            .content img {
+                width: 90% !important; /* Imagem mais responsiva */
+                max-width: 300px !important; /* Limite de tamanho */
+                margin-bottom: 10px !important; /* Espaço entre imagem e texto */
+            }
+
+            .textimg {
+                font-size: 14px !important; /* Texto reduzido */
+                text-align: justify !important; /* Melhor leitura */
+                display: block; /* Garante que o texto fique bem distribuído */
+            }
+            
+        }
+
+        @media (max-width: 480px) {
+            .container-box {
+                width: 80%; /* Ajuste para telas pequenas */
+                max-width: 400px; /* Reduz ainda mais em celulares menores */
+                padding: 15px; /* Ajusta o espaçamento interno */
+            }
+        }
+        /* Retângulo de fundo */
+        .background-section {
+            background-color: #015A42; /* Cor de fundo verde */
+            border-radius: 20px; /* Bordas arredondadas */
+            min-height: 350px; /* Altura mínima */
+            width: 90%; /* Largura ajustada à estrutura */
+            max-width: 800px; /* Limite máximo */
+            height: auto; /* Altura do retângulo */
+            margin: 20px auto; /* Espaçamento da seção acima e centralização */
+            position: relative; /* Define o contexto de empilhamento */
+            margin-bottom: 50px;
+        }
+                /* Responsividade - Ajuste para telas menores */
+        @media (max-width: 768px) {
+            .background-section {
+                width: 95%; /* Ajusta a largura */
+                margin: 50px auto; /* Ajuste de margem */
+            }
+        }
+        
+        /* Retângulo transparente (sobreposição) */
+        .transparent-section {
+            background-color: rgba(255, 255, 255, 0.822); /* Tom verde com transparência */
+            border: 2px solid #015A42; /* Borda sólida verde */
+            border-radius: 20px; /* Bordas arredondadas */
+            width: calc(100% - 40px); /* Reduz tamanho para acomodar margens */
+            height: 100%;
+            position: absolute; /* Define posicionamento relativo */
+            top: 20px;
+            left: 20px; 
+            z-index: 1; /* Garante que o retângulo fique sobre o fundo */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra opcional */
+            display: flex; /* Usamos flexbox para alinhar o conteúdo */
+            flex-direction: column; /* Alinha os elementos verticalmente */
+            justify-content: space-evenly; /* Distribui espaço uniformemente */
+            align-items: center; /* Alinha o conteúdo à esquerda */
+            text-align: center; /* Centraliza o texto */
+        }
+        
+        
+                /* Responsividade - Ajuste da largura da transparent-section para telas menores */
+        @media (max-width: 768px) {
+            .transparent-section {
+                width: 90%; /* Diminui a largura da sobreposição */
+                left: 5%; /* Ajusta o posicionamento para centralizar */
+                right: 5%; /* Garante que o elemento ocupe menos espaço na tela */
+                padding-top: 10px;
+                padding-bottom: 10px;
+            }
+        }
+        /* Círculo verde */
+        .circle-green {
+            position: absolute;
+            top: -30px; /* Distância do topo */
+            left: -30px; /* Distância da esquerda */
+            background-color: #015A42; /* Cor verde */
+            border-radius: 50%; /* Para garantir que seja redondo */
+            width: 120px; /* Tamanho do círculo */
+            height: 120px; /* Tamanho do círculo */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 2; /* Garantir que fique sobre o fundo */
+        }
+
+        /* Círculo branco sobre o verde */
+        .circle-white {
+            position: absolute;
+            top: -4px; /* Eleva o círculo branco para cima */
+            left: -5px; /* Centraliza o círculo branco sobre o verde */
+            background-color: white; /* Cor branca */
+            border-radius: 50%; /* Para garantir que seja redondo */
+            width: 120px; /* Tamanho do círculo branco */
+            height: 120px; /* Tamanho do círculo branco */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 3; /* Coloca o círculo branco sobre o verde */
+        }
+
+        /* Estilizando o ícone dentro do círculo branco */
+        .circle-white i {
+            font-size: 80px; /* Tamanho do ícone */
+            color: #015A42; /* Cor verde para o ícone */
+        }
+        /* Responsividade - Ajuste para telas menores */
+        @media (max-width: 768px) {
+            .circle-green, .circle-white {
+                width: 60px; /* Diminui o tamanho */
+                height: 60px; /* Diminui o tamanho */
+                top: -5px; /* Ajusta o posicionamento */
+                left: -5px; /* Ajusta o posicionamento */
+            }
+
+            .circle-white i {
+                font-size: 40px; /* Reduz o ícone */
+            }
+        }
+        .learn-more-title {
+            color: #015A42; /* Cor verde */
+            font-size: 50px; /* Tamanho do título */
+            font-weight: lighter;
+            text-align: left;
+            font-family: 'Bebas Neue', sans-serif; /* Fonte Bebas Neue */
+            margin: -25px 0;
+            width: 80%; /* Ocupa toda a largura disponível */
+        }
+        .learn-more-paragraph {
+            font-family: 'Roboto', sans-serif; /* Fonte Roboto */
+            text-align: left;
+            font-size: 17px;
+            line-height: 1.4; /* Espaçamento entre linhas */
+            color: #000; /* Cor verde */
+            margin: -15px 0; /* Reduz margens */
+            width: 90%; /* Ocupa toda a largura disponível */
+            word-wrap: break-word;
+        }
+        .centered-paragraph {
+            text-align: center; /* Centraliza o texto horizontalmente */
+            margin: -5px 0; /* Ajusta a margem para uniformidade */
+            font-size: 17px; /* Mantém o tamanho consistente */
+            line-height: 1.4; /* Controla o espaçamento entre linhas */
+        }
+                /* Responsividade - Ajuste para telas menores */
+        @media (max-width: 768px) {
+            .learn-more-title {
+                font-size: 30px; /* Ajusta o tamanho do título */
+                text-align: center;
+                margin: 10px 0;
+            }
+
+            .learn-more-paragraph {
+                font-size: 15px; /* Ajusta o tamanho do texto */
+                line-height: 1.4;
+                text-align: justify; /* Centraliza o texto */
+                margin: 5px 0; /* Reduz margens */
+            }
+        }
+            .outer-background {
+                padding: 10px;
+                background-color: #9f43be11; /* Cor de fundo para o contêiner externo */
+        }
+        .play-icon {
+            display: flex; /* Flexbox para centralizar o conteúdo */
+            justify-content: center;
+            align-items: center;
+            background-color: #015A42; /* Fundo verde */
+            color: #FFF; /* Ícone branco */
+            width: 90px; /* Largura do botão */
+            height: 55px; /* Altura do botão */
+            border-radius: 13px;
+            font-size: 40px; /* Tamanho do ícone */
+            cursor: pointer; /* Cursor de clique */
+            transition: transform 0.3s ease; /* Efeito de transição */
+        }
+
+        .play-icon:hover {
+            transform: scale(1.1); /* Aumenta levemente no hover */
+        }
+                /* Responsividade - Ajuste para telas menores */
+        @media (max-width: 768px) {
+            .play-icon {
+                width: 60px; /* Diminui a largura */
+                height: 40px; /* Diminui a altura */
+                font-size: 25px; /* Diminui o tamanho do ícone */
+            }
+        }
+        /* Modal - Oculto por padrão */
+        .video-modal {
+            display: none; /* Inicialmente o modal está oculto */
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8); /* Fundo escuro transparente */
+            z-index: 1000; /* Garantir que o modal fique acima de outros conteúdos */
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Conteúdo do modal (onde ficará o vídeo) */
+        .video-content {
+            position: relative;
+            background-color: #015A42;
+            border-radius: 10px;
+            padding: 20px;
+        }
+         
+        /* Responsividade - Ajustes para dispositivos móveis */
+        @media (max-width: 768px) {
+            .video-content {
+                max-width: 100%; /* Maximize a largura do modal no mobile */
+                padding: 10px;
+            }
+
+            .video-content iframe {
+                width: 100%; /* O iframe ocupará toda a largura disponível */
+                height: 56.25vw; /* Isso mantém a proporção de 16:9 */
+                max-height: 80vh; /* Evita que o vídeo ultrapasse a tela */
+                border-radius: 10px;
+            }
+        }
+
+        /* Botão de fechar */
+        .close-btn {
+            position: absolute;
+            top: -15px;
+            right: -15px;
+            font-size: 40px;
+            color: #FFF;
+            cursor: pointer;
+            transition: transform 0.2s ease, color 0.2s ease;
+        }
+        .close-btn:hover {
+            transform: scale(1.2); /* Aumenta levemente no hover */
+            color: #FF0000; /* Muda a cor para vermelho no hover */
+        }
+        /* Container do slider */
+        .slider-container {
+            position: relative;
+            width: 80%;
+            max-width: 800px;
+            overflow: hidden;
+            border: 3px solid #015A42; /* Borda violeta */
+            border-radius: 10px;
+            background-color: #fff;
+            margin: 20px auto;
+        }
+
+        /* Slider */
+        .slider {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        /* Slides */
+        .slide {
+            min-width: 100%;
+            text-align: center;
+            font-size: 18px;
+            font-weight: normal;
+            padding: 50px;
+            box-sizing: border-box;
+            white-space: normal; /* Permite que o texto ocupe várias linhas */
+            word-wrap: break-word; /* Força quebra de palavras longas, se necessário */
+            overflow-wrap: break-word; /* Alternativa para forçar a quebra */
+        }
+
+        /* Setas */
+        .arrow {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #015A42; /* Cor violeta */
+            font-size: 40px; /* Tamanho da seta */
+            cursor: pointer;
+            z-index: 10;
+            transition: color 0.3s ease;
+        }
+
+        .arrow:hover {
+            color: #015a427e; /* Cor mais escura ao passar o mouse */
+        }
+
+        .left-arrow {
+            left: 10px;
+        }
+
+        .right-arrow {
+            right: 10px;
+        }
+            /* Estilo para os tópicos de texto */
+        .topico-texto {
+            width: 100%;
+        }
+
+        .topico-texto p {
+            font-size: 18px;
+            font-family: 'Roboto', sans-serif;
+            font-weight: bold;
+        }
+
+        .topico-texto ul {
+            list-style: none; /* Remove marcadores padrão */            
+        }
+
+        .topico-texto ul li {
+            font-size: 16px;
+            font-family: 'Roboto', sans-serif;
+            display: flex;
+            align-items: flex-start; /* Alinha o texto com o ícone */
+            white-space: pre-wrap; /* Preserva espaços e quebras de linha */
+        }
+        .topico-destaque {
+            font-size: 18px; /* Aumente o tamanho conforme a necessidade */
+            font-weight: 400;
+        }
+
+        /* Responsividade */
+        @media (max-width: 768px) {
+            .topico-texto {
+                padding: 15px;
+            }
+
+            .topico-texto p {
+                font-size: 16px;
+            }
+
+            .topico-texto ul li {
+                font-size: 18px;
+            }
+        }
+        .small-frameg {
+            border: 2px solid #015A42;
+            width: 80%; /* Usa 90% da largura do contêiner */
+            max-width: 700px; /* Define limite máximo */
+            background-color: #FFF;
+            height: auto;
+            margin: 20px auto; /* Centraliza e ajusta margem superior */
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Leve sombra para destaque */
+        }
+
+        .small-frameg p {
+            display: flex;
+            align-items: flex-start;
+            gap: 15px; /* Define o espaçamento entre o número e o texto */
+            font-size: 15px;
+            font-family: 'Roboto', sans-serif;
+            color: #000;
+            line-height: 1.8;
+            text-align: justify;
+            margin: 10px auto;
+        }
+        
+
+        .small-frameg h4{
+            text-align: center;
+            margin: 20px auto;
+            line-height: 1.8;
+            font-family: 'Roboto', sans-serif;
+        }
+                /* Responsividade */
+        @media (max-width: 768px) {
+            .small-frameg {
+                width: 90%; /* Mais largura para ocupar melhor a tela */
+                padding: 15px;
+            }
+
+            .small-frameg p {
+                font-size: 14px; /* Mantém boa leitura */
+                line-height: 1.7;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .small-frameg {
+                width: 95%; /* Usa quase toda a tela para não ficar apertado */
+                padding: 10px;
+            }
+
+            .small-frameg p {
+                font-size: 13px; /* Mantém o texto confortável */
+                line-height: 1.6;
+            }
+        }
+
+        .text-green{
+            color: #015A42;
+        }
+        /* Título dentro do quadro */
+        .titulo-quadrov {
+            font-size: 18px;
+            font-family: 'Roboto', sans-serif;
+            color: #333; /* Verde */
+            margin-top: 50px;
+        }
+
+        /* Imagem dentro do quadro */
+        .imagem-quadrov {
+            width: 100%; /* Imagem ocupa toda a largura disponível */
+            max-width: 700px; /* Limite máximo da largura */
+            height: auto; /* Mantém a proporção */
+            margin-bottom: 15px;
+        }
+
+        /* Fonte da imagem */
+        .fonte-quadrov {
+            font-size: 16px;
+            font-family: 'Roboto', sans-serif;
+            color: #555; /* Cinza escuro */
+            margin-bottom: 10px;
+            text-align: left;
+        }
+
+        /* Descrição da imagem */
+        .descricao-quadrov {
+            font-size: 18px;
+            font-family: 'Roboto', sans-serif;
+            color: #333; /* Preto claro */
+            text-align: justify;
+            line-height: 1.6;
+        }
+        /* Modal - Fundo escuro ao abrir a imagem */
+        .modal {
+            display: none; /* Escondido por padrão */
+            position: fixed;
+            z-index: 9999;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Imagem no modal */
+        .modal-content {
+            max-width: 90%;
+            max-height: 90%;
+            display: block;
+            margin: auto;
+            border-radius: 8px;
+        }
+
+        /* Botão de fechar */
+        .close {
+            position: absolute;
+            top: 15px;
+            right: 25px;
+            color: white;
+            font-size: 35px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        /* Estilo responsivo para o quadro */
+        @media (max-width: 768px) {
+            .quadrov {
+                padding: 15px;
+            }
+
+            .titulo-quadrov {
+                font-size: 20px;
+            }
+
+            .fonte-quadrov,
+            .descricao-quadrov {
+                font-size: 14px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .quadrov {
+                padding: 10px;
+            }
+
+            .titulo-quadrov {
+                font-size: 18px;
+            }
+
+            .fonte-quadrov,
+            .descricao-quadrov {
+                font-size: 12px;
+            }
+        }
+        /* Conteúdo da Conclusão */
+        .conclusao {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+            background-color: #E2F4EB; /* Fundo neutro */
+        }
+
+        .conclusao .titulo-conclusao {
+            font-family: 'Bebas Neue', cursive;
+            font-size: 50px;
+            font-weight: lighter;
+            color: #015A42; /* Cor verde */
+            margin: 10px auto 10px auto;
+        }
+        .conclusao .caixa-texto {
+            background-color: #E2F4EB; /* Verde mais claro */
+            width: 100%;
+            max-width: 800px;
+        }
+        .conclusao .caixa-texto p {
+            font-family: 'Roboto', sans-serif;
+            font-size: 19px;
+            line-height: 1.6;
+            text-align: justify;
+            color: #333;
+            margin-bottom: 15px;
+            padding: 10px 0;
+        }
+
+        /* Estilo responsivo para telas menores */
+        @media (max-width: 768px) {
+            .conclusao .titulo-conclusao {
+                font-size: 2.8rem;
+                text-align: left;
+            }
+
+            .conclusao .caixa-texto p {
+                font-size: 1.2rem;
+                line-height: 1.4;
+                margin-bottom: 10px;
+            }
+
+        }
+        @media (max-width: 480px) {
+            .conclusao .titulo-conclusao {
+                font-size: 2.8rem;
+            }
+
+            .conclusao .caixa-texto p {
+                font-size: 1.2rem;
+                line-height: 1.4;
+                margin-bottom: 10px;
+            } 
+        }
+        /* Conteúdo da Introdução */
+        .referencias {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 0;
+            background-color: #FFF; /* Fundo neutro */
+            border-top: 5px solid #015A42;
+        }
+
+        .referencias .titulo-referencias {
+            font-family: 'Bebas Neue', cursive;
+            font-size: 50px;
+            font-weight: lighter;
+            color: #015A42; /* Cor verde */
+            margin: 10px auto 10px auto;
+        }
+
+        .referencias .caixa-texto {
+            background-color: #FFF; /* Verde mais claro */
+            padding: 20px;
+            width: 100%;
+            max-width: 800px;
+            box-sizing: border-box; /* Inclui padding nas dimensões */
+            overflow-wrap: break-word; /* Quebra de palavras longas */
+        }
+
+        .referencias .caixa-texto p {
+            font-family: 'Roboto', sans-serif;
+            font-size: 19px;
+            line-height: 1.6;
+            text-align: justify;
+            color: #000;
+            margin-bottom: 20px;
+        }
+        .referencias .caixa-texto {
+            word-wrap: break-word;
+            overflow-wrap: anywhere;
+        }
+        .referencias .caixa-texto, .conclusao .caixa-texto {
+            word-wrap: break-word;
+            overflow-wrap: anywhere;
+        }
+                /* Ajustes responsivos */
+        @media (max-width: 768px) {
+            .referencias .titulo-referencias {
+                font-size: 50px; /* Ajuste do tamanho da fonte */
+            }
+
+            .referencias .caixa-texto {
+                padding: 15px; /* Menos padding */
+                max-width: 90%; /* Ajusta o tamanho da caixa no tablet */
+            }
+
+            .referencias .caixa-texto p {
+                font-size: 16px; /* Reduz o tamanho da fonte para telas menores */
+            }
+        }
+
+        @media (max-width: 480px) {
+            .referencias .titulo-referencias {
+                font-size: 2.8rem; /* Menor tamanho da fonte no mobile */
+            }
+
+            .referencias .caixa-texto {
+                max-width: 95%; /* Ajusta ainda mais o tamanho da caixa */
+            }
+
+            .referencias .caixa-texto p {
+                font-size: 14px; /* Reduz ainda mais o tamanho da fonte */
+            }
+        }
+
+        
+        /* Estilização do rodapé */
+        .footer {
+            border-top: 5px solid #015A42; /* Borda superior */
+            background-color: #FFFFFF; /* Fundo branco */
+            text-align: center; /* Centralizar texto */
+            padding: 15px 0; /* Espaçamento interno */
+            box-sizing: border-box; /* Inclui padding nas dimensões */
+        }
+
+        .footer p {
+            font-family: 'Roboto', sans-serif;
+            font-size: 18px;
+            font-weight: bold;
+            color: #015A42; /* Cor do texto */
+            margin: 0; /* Remove espaçamento externo */
+        }
+        /* Texto descritivo */
+        .footer .fonte-menor {
+            font-family: 'Roboto', sans-serif;
+            font-size: 13px;
+            color: #555; /* Cor neutra */
+            line-height: 1.5; /* Espaçamento entre linhas */
+            display: block; /* Garante quebra para nova linha */
+            margin-top: 10px; /* Espaço entre o texto e o divisor */
+        }
+                /* Divisor */
+        .footer-divider {
+            border: none; /* Remove borda padrão */
+            height: 1px; /* Altura da linha */
+            background-color: #015A42; /* Cor da linha */
+            margin: 10px auto; /* Espaçamento vertical */
+            width: 80%; /* Define a largura do divisor */
+            opacity: 0.5; /* Reduz opacidade para suavizar */
+        }
+                /* Ajustes do rodapé para mobile */
+        @media (max-width: 480px) {
+            .footer p {
+                font-size: 15px; /* Ajusta o tamanho da fonte */
+            }
+            .footer .fonte-menor {
+                font-size: 12px; /* Reduz tamanho da fonte */
+                line-height: 1.4; /* Ajusta o espaçamento */
+            }
+            .footer-divider {
+                width: 100%; /* Ajusta largura do divisor no mobile */
+            }
+        }
+        .download-section {
+                padding: 15px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 15px;
+            }
+            .download-btn {
+                background-color: #9F43BE;
+                color: white;
+                text-decoration: none;
+                font-size: 16px;
+                padding: 10px 15px;
+                border-radius: 8px;
+                display: flex;
+                align-items: center;
+                gap: 8px;
+                transition: all 0.3s ease;
+                font-weight: bold;
+                margin-top: 80px;
+            }
+
+            .download-btn i {
+                font-size: 18px;
+            }
+
+            .download-btn:hover {
+                background-color: #7D3598;
+            }
+</style>
+</head>
+<body>
+    <!-- Navbar -->
+    <div class="navbar">
+        <div class="logo">
+            <img src="https://drive.google.com/thumbnail?id=1iZTd5_tOqqVTFtrgbqdKazN1J1Yk-PuE" alt="Logo">
+        </div>
+        <div class="menu-toggle">
+            <i class="bx bx-menu"></i>
+            <i class="bx bx-x" style="display: none;"></i> <!-- Ícone de fechar menu -->
+        </div>
+        <ul>
+            <li><a href="#introducao">Introdução</a></li>
+            <li><a href="#secao1">Tópico 1</a></li>
+            <li><a href="#secao22">Tópico 2</a></li>
+            <li><a href="#secao3">Tópico 3</a></li>
+            <li><a href="#download">Download</a></li>
+            <li><a href="#conclusao">Conclusão</a></li>
+            <li><a href="#referencias">Refs Bibliográficas</a></li>
+        </ul>
+    </div>
+    <!-- Título -->
+    <section id="titulo" class="titulo-intro">
+        <h1 class="titulo-programa">PROGRAMA DE ATUALIZAÇÃO</h1>
+    </section>
+    
+    <!-- Capa do Livro -->
+    <section id="capa-livro" class="capa-livro">
+        <div class="borda superior"></div>
+        <div class="conteudo-capa">
+            <h1 class="titulo-materia">LÍNGUA PORTUGUESA - NÍVEL 2</h1>
+            <h2 class="subtitulo-professor">PROFª VALÉRIA SILVA ROSA DE ALMEIDA</h2>
+        </div>
+        <div class="borda inferior"></div>
+    </section>
+    <!-- Seção Introdução -->
+    <section id="introducao" class="introducao">
+        <!-- Barra Superior -->
+        <div class="barra-superior">
+            <h1 class="titulo-barra">UNIDADE 1 | ESTRATÉGIAS DE ESCRITA – A FORMAÇÃO DO ESCRITOR PROFICIENTE</h1>
+        </div>
+    
+        <!-- Conteúdo -->
+        <div class="conteudo-introducao">
+            <div class="caixa-texto">
+                <h1 class="titulo-introducao">INTRODUÇÃO</h1>
+                <p><span class="text-right">
+                    “Escrever é uma prática social e pode ser libertador. Escrever bem pode ser o segredo do sucesso<br>
+                    na vida acadêmica e na vida profissional. Um pequeno passo pode mudar sua vida -
+                    <strong>Robert Maurer</strong>, UCLA, School of Medicine, <strong>USAnal</strong>.” - Joaquim Mattoso Câmara Júnior
+                </span></p>
+                <p>Olá estudante!</p>
+                <p>
+                    A escrita ocupa um papel central em nossa interação com o mundo, seja no âmbito acadêmico,
+                    profissional ou pessoal. Trata-se de uma habilidade que não surge naturalmente, mas que pode ser
+                    desenvolvida e aprimorada com orientação, esforço e prática constante. Escrever bem é mais do que
+                    seguir regras gramaticais: é organizar ideias, selecionar palavras e articular argumentos de forma lógica
+                    e coerente, de modo a alcançar um público específico e comunicar-se de maneira efetiva.
+                </p>
+                <p>
+                    Nesta unidade, refletiremos sobre a escrita não apenas como uma competência técnica, mas como
+                    uma forma de expressão criativa e um instrumento de transformação. Exploraremos os desafios e as
+                    etapas do processo de produção textual, desde o planejamento até a revisão, destacando sua relevância
+                    como ferramenta de aprendizado e comunicação. Além disso, serão apresentados exemplos práticos
+                    e orientações para evitar armadilhas comuns, como vícios de linguagem e construções redundantes,
+                    ajudando você a construir textos mais objetivos e claros.
+                </p>
+            </div>
+        </div>
+    </section>
+    <section id="secao1" class="secao1">
+        <h1>
+            1. A ESCRITA COMO PRÁTICA SOCIAL
+        </h1>
+        <p>
+            Escrever não é uma tarefa simples nem um dom que apenas alguns iluminados possuem. Ninguém nasce
+            sabendo escrever, mas todos podem aprender a produzir bons textos, desde que sejam bem orientados
+            para fazê-lo <strong>e se empenhem.</strong> No entanto, <strong>ninguém aprende a escrever de repente</strong>, como <strong>num passe de
+            mágica</strong>. O aprendizado da escrita é um processo um tanto demorado, com necessidade de entendimento
+            e domínio do conteúdo e do gênero a que pertence, isto é, uma carta de apresentação, um trabalho no
+            ensino superior, uma poesia.
+        </p>
+        <p>
+            É necessário também considerar a <strong>situação de comunicação, pensar na forma geral de organização do
+            texto</strong>, na <strong>construção de períodos</strong> e na <strong>escolha das palavras adequadas</strong>. Deve-se escrever na norma
+            padrão culta, considerando as regras gramaticais e ortográficas – em vigência com a NOVA REFORMA
+            ORTOGRÁFICA. O processo da escrita exige planejar, escrever, revisar e, por vezes, reescrever o texto
+            mais de uma vez. É por isso que, em alguns momentos, sentimos certo desconforto diante de uma folha
+            de papel em branco. Algumas vezes, <strong>você pode até saber o que quer escrever, mas se atrapalha na
+            hora de organizar as ideias no papel.</strong> Outras vezes, o assunto sobre o qual tem de escrever está um
+            tanto distante de seus objetivos, por isso você também não tem pique para a empreitada.
+        </p>
+        <div class="container-box">
+            <div class="content">
+                <img src="https://res.cloudinary.com/di4ria1pf/image/upload/v1742407763/e68iwbewdx28l9vsr9lq.jpg"
+                    alt="Imagem representativa">
+                <p class="textimg">
+                    É preciso, realmente, que nós percebamos algum <strong>sentido
+                    em escrever</strong>, que pode ser desde afirmar nossas ideias
+                    e posições sobre determinado tema, produzir trabalhos
+                    adequados ao pedido do curso escolhido na universidade,
+                    reivindicar algo que nos é de direito, até saber que estamos
+                    meramente exercitando algum aspecto da escrita. Caso
+                    contrário, não há vontade e empenho que sobrevivam...
+                </p>
+            </div>
+            <p><span class="description"><strong>FONTE:</strong> 123RF</span></p>
+            <p><span class="description"><strong>Descrição da imagem:</strong> A imagem mostra um grupo de estudantes em uma biblioteca ou sala de estudos. A estudante
+            em primeiro plano, vestindo um cardigã azul e óculos, está sorrindo enquanto escreve em seu caderno. Atrás dela, outros
+            alunos estão focados em suas atividades, alguns usando dispositivos eletrônicos e outros escrevendo. O ambiente é
+            iluminado e ao fundo há prateleiras com livros.</span>
+            </p>
+        </div>
+        <p>
+            Há, portanto, uma <strong>arte de escrever</strong>. Não é uma prerrogativa dos literatos, mas uma atividade social
+            indispensável, para a qual falta, não obstante, muitas vezes, uma preparação preliminar. A arte de falar,
+            necessária à exposição oral, é mais fácil na medida em que se beneficia da prática da fala cotidiana.
+        </p>
+        <p>
+            O que há de comum, antes de tudo, entre a exposição oral e a escrita é a necessidade de uma distribuição
+            metódica e compreensível de ideias com a visualização de um <strong>objetivo definido</strong>. Ninguém é capaz de escrever
+            bem, se não sabe bem o que vai escrever. Justamente por causa disso, as condições para a redação no
+            exercício da vida profissional ou no intercâmbio amplo dentro da sociedade são muito diversas das da redação
+            escolar. A convicção do que vamos dizer, a importância que há em dizê-lo, o domínio de um assunto da nossa
+            especialidade tira, à redação, o caráter negativo de mero exercício formal, como na escola.
+        </p>
+        <div class="container-box">
+            <div class="content">
+                <img src="https://res.cloudinary.com/di4ria1pf/image/upload/v1742408138/xqh99pa6ud4p37yl0hi2.jpg"
+                    alt="Imagem representativa">
+                <p class="textimg">
+                    Qualquer um de nós é capaz de escrever sobre um
+                    assunto. Não há um jeito especial para redigir, ao
+                    contrário do que muita gente pensa. Há apenas uma
+                    <strong>falta de preparação inicial, que o esforço e a prática
+                    vencem</strong>. Por outro lado, a arte de escrever, na medida
+                    em que consolida nossa capacidade de expressão do
+                    pensar e do sentir, tem de firmar raízes na nossa própria
+                    personalidade e decorre, em grande parte, de um trabalho
+                    nosso para desenvolver a personalidade por este ângulo.
+                </p>
+            </div>
+            <p><span class="description"><strong>FONTE:</strong> 123RF</span></p>
+            <p><span class="description"><strong>Descrição da imagem:</strong> A imagem mostra um grupo de quatro jovens sentados lado a lado em uma sala de aula. Todos
+            estão concentrados, escrevendo em folhas de papel, sugerindo que estão realizando uma atividade como uma prova
+            ou exercício. No primeiro plano, à esquerda, um jovem com barba está focado no que escreve. Ao lado dele, mais ao
+            centro, uma jovem loira também lê atentamente o papel, enquanto os outros dois jovens ao fundo mantêm a mesma
+            postura de concentração. O ambiente é iluminado e organizado, caracterizando um contexto educacional.</span>
+            </p>
+        </div>
+        <p>
+            <strong>A arte de escrever é um ato efetivo de comunicação entre o escritor e o leitor</strong>, é uma atividade preliminar
+            já enraizada, pois parte do ensino escolar e de um hábito de leitura inteligentemente conduzido; depende
+            muito, portanto, de nós mesmos, de uma disciplina mental adquirida pela autocrítica e pela observação
+            cuidadosa do que outros, com bom resultado, escreveram.
+        </p>
+        <p>
+            Ao escrever é muito importante levar em conta os diversos elementos que determinam o tipo de texto a ser
+            produzido, o contexto, a esfera, se jornalística, literária, científica, acadêmica etc. Portanto, <strong>o escritor deverá
+            salientar a finalidade do texto, seu objetivo e o leitor a quem se destina</strong>. Adequar o nível de linguagem – se culta ou
+            informal – ao contexto e ao seu leitor é um requisito básico para escrever e expressar-se bem
+        </p>
+    </section>
+    <!-- Contêiner externo para definir a cor de fundo -->
+    <section class="outer-background">
+        <!-- Seção Saiba Mais - Retângulo de Fundo -->
+        <section class="background-section">
+            <!-- Círculo Verde -->
+            <div class="circle-green">
+                <!-- Círculo Branco com ícone -->
+                <div class="circle-white">
+                    <i class='bx bx-book-reader'></i>
+                </div>
+            </div>
+            <div class="transparent-section">
+                <h1 class="learn-more-title">SAIBA MAIS</h1>
+                <p class="learn-more-paragraph">
+                    Este vídeo apresenta sete estratégias eficazes para melhorar sua escrita acadêmica e
+                    profissional. Ideal para estudantes que desejam se destacar em seus trabalhos e comunicações.
+                    <br><br>
+                    <strong>Como Escrever Bem:</strong> 7 Simples Dicas de Sucesso Garantido
+                </p>
+                <!-- Ícone de Play -->
+                <div class="play-icon" data-video="https://www.youtube.com/embed/rpO9LDlF7kg?si=mmEiXQH1Rwo93MMz"
+                    onclick="openVideoModal(this)">
+                    <i class='bx bx-play-circle'></i>
+                </div>
+            </div>
+            <!-- Modal com o vídeo -->
+            <div id="videoModal" class="video-modal" onclick="closeVideoModal()">
+                <div class="video-content" onclick="event.stopPropagation()">
+                    <i class="bx bxs-x-circle close-btn" onclick="closeVideoModal()"></i>
+                    <iframe id="videoIframe" width="800" height="450" src="" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen>
+                    </iframe>
+                </div>
+            </div>
+        </section>
+    </section>
+    <section id="secao22" class="secao2">
+        <h1>2. A ESCRITA COMO FONTE DE PRAZER</h1>
+        <p>
+            Muitas vezes, para obtermos certo prazer na vida, é necessário algum esforço ou, no mínimo, algum
+            trabalho. Assim acontece também com o ato de escrever. Encontrar as palavras certas, o melhor jeito de
+            encadeá-las, a trama adequada de um texto, pode ser fonte de grande satisfação. Quem não gosta de
+            narrar uma boa história, argumentar solidamente, expor as ideias com clareza e desenvoltura, de forma
+            a convencer os interlocutores a respeito da <strong>própria opinião</strong>? Será que existe alguém que não goste de
+            conversar sobre um assunto do qual entenda bastante ou que não goste de admirar algo muito bom que
+            tenha feito e passar para seus semelhantes como um aprendizado importante?
+        </p>
+        <p>
+            <strong>Escrever é uma prática social e pode ser libertador</strong>! A escrita não é só um ato de expressão de ideias,
+            pois para escrever somos obrigados a organizar nossas ideias, pensarmos mais sobre elas, percebermos
+            relações que não notamos antes, aprender algo novo e, dependendo do tema sobre o qual escrevemos,
+            ainda desenvolvemos nosso senso crítico. Finalmente, é uma oportunidade de expor e aprimorar mais a
+            nossa língua portuguesa que, sem sombra de dúvidas, deve ser orgulho para nós, brasileiros. Fica claro
+            que não são apenas as questões gramaticais que ocupam o centro das atenções na construção da escrita,
+            <strong>mas a maneira de elaborar um texto.</strong>
+        </p>
+        <p>
+            Enfim, produzir textos é um processo que envolve diferentes etapas, e são conteúdos fundamentais da produção
+            escrita. Deslize para o lado e veja como as etapas se conectam para construir um texto bem elaborado.
+        </p>
+        <div class="slider-container">
+            <i class="bx bx-chevron-left arrow left-arrow" onclick="prevSlide()"></i>
+            <div class="slider">
+                <div class="slide">
+                    <strong>▸ planejar;</strong>
+                </div>
+                <div class="slide">
+                    <strong>▸ escrever;</strong>
+                </div>
+                <div class="slide">
+                    <strong>▸ revisar;</strong>
+                </div>
+                <div class="slide">
+                    <strong>▸ reescrever.</strong>
+                </div>
+            </div>
+            <i class="bx bx-chevron-right arrow right-arrow" onclick="nextSlide()"></i>
+        </div>
+        <p>
+            A revisão é um dos elementos muito importantes na escrita, pois ela não consiste apenas em corrigir
+            problemas ortográficos e gramaticais – como já foi mencionado anteriormente –, mas cuidar para que o
+            <strong>texto cumpra sua finalidade comunicativa</strong>. Um escritor para se tornar proficiente, no entanto, não faz a
+            revisão no final do trabalho. Ele deve reler o trecho já produzido e verificar se está adequado aos objetivos
+            e às ideias que tinha a intenção de comunicar – só então deve planejar a continuação.
+        </p>
+        <p>
+            Vale ressaltar que você, estudante, deve:
+        </p>
+        <div class="topico-texto">
+            <ul>
+                <li><span class="topico-destaque"><strong>▸</strong> Redigir gêneros mais complexos dos que aprendeu anteriormente – descrição, narração, carta etc.</span>
+                </li>
+                <li><span class="topico-destaque"><strong>▸</strong> Atualizar a norma-padrão relacionada à <strong>Nova Ortografia – Acordo Ortográfico Da Língua Portuguesa</strong>, obrigatória desde 2016.</span>
+                </li>
+                <li><span class="topico-destaque"><strong>▸</strong> Representar a escrita na universidade, ligada à necessidade de organizar as ideias, argumentar e exprimir o pensamento coeso e coerente ao escrever.</span>
+                </li>
+                <li><span class="topico-destaque"><strong>▸</strong> Conscientizar-se de que a organização das ideias e o tipo de argumentação dependem do gênero textual, do destinatário (leitor), do objetivo do texto e do local em que é produzido (Curso Superior).</span>
+                </li>
+            </ul>
+        </div>
+        <p>
+            As sugestões a seguir não fazem parte de uma receita pronta, mas tentar segui-las é um bom passo para
+            escrever melhor. Vamos conferir?
+        </p>
+        <h4><span class="text-green">Figura 1.</span> Sugestões para escrita</h4>
+        <div class="small-frameg">
+            <p><strong>1.</strong> A linguagem acadêmica usa a norma padrão culta da língua portuguesa.</p>
+            <p><strong>2.</strong> Linguagem de “internetês”... ESQUEÇA. Naum não pode utilizar.</p>
+            <p><strong>3.</strong> Evite ao máx. a utiliz. de abrev. etc.</p>
+            <p><strong>4.</strong> É desnecessário empregar um estilo de escrita demasiadamente rebuscado. Ex.: Tal prática advém de esmero excessivo que raia o exibicionismo narcisista.</p>
+            <p><strong>5.</strong> Anule aliterações abusivas – palavras que contêm a mesma letra no início. Ex.: Laura levou Luíza logo cedo para a liquidação de lingerie.
+            </p>
+            <p><strong>6.</strong> não esqueça as maiúsculas no início das frases.</p>
+            <p><strong>7.</strong> Evite lugares-comuns, expressões-comuns. Elas empobrecem o texto. “O diabo foge da cruz”. “Mais vale um pássaro na mão do que dois voando”.</p>
+            <p><strong>8.</strong> O uso de parênteses (mesmo quando for relevante) é desnecessário. Melhor usar travessão – .......... –</p>
+            <p><strong>9.</strong> Estrangeirismos estão out; palavras de origem portuguesa estão in.</p>
+            <p><strong>10.</strong> Evite o emprego da gíria, mesmo que pareça nice, sacou?? Só, meu...</p>
+            <p><strong>11.</strong> Palavras de baixo calão podem acabar com a credibilidade do seu texto</p>
+            <p><strong>12.</strong> Nunca generalize: generalizar é um erro em todas as situações.</p>
+            <p><strong>13.</strong> Evite repetir a mesma palavra, pois essa palavra vai ficar uma palavra repetitiva. A repetição da palavra vai fazer com que a palavra repetida desqualifique o texto onde a palavra se encontra repetida.</p>
+            <p><strong>14.</strong> Não abuse de citações. Como costuma dizer um amigo meu: “Quem cita os outros não tem ideias próprias”.</p>
+            <p><strong>15.</strong> Frases incompletas podem causar</p>
+            <p><strong>16.</strong> Não seja redundante, não é preciso dizer a mesma coisa de formas diferentes; isto é, basta mencionar cada argumento uma só vez, ou por outras palavras, não repita a mesma ideia várias vezes.</p>
+            <p><strong>17.</strong> Frases com apenas uma palavra? Jamais! Não existe!!!</p>
+            <p><strong>18.</strong> A voz passiva deve ser evitada. “A fera foi encontrada morta.” Encontraram a fera morta.</p>
+            <p><strong>19.</strong> Utilize a pontuação corretamente o ponto e vírgula pois a frase poderá ficar sem sentido será que ninguém mais sabe usar o ponto de interrogação</p>
+            <p><strong>20.</strong> Não abuse dos verbos SER, ESTAR, TER, HAVER, pois empobrecem a expressão da redação. “Este
+            conteúdo tem cinco regras básicas”. “......... apresenta ....” Os verbos DIZER, FALAR nem se fala!!!
+            Texto não fala / não diz; autor do texto não fala, não diz. Você não está assistindo a uma conferência.
+            Você está lendo um texto.</p>
+            <p><strong>21.</strong> Conforme recomenda a A.G.O.P. ou a AGOP, nunca utilize siglas desconhecidas. Se precisar utilizá
+            las, explique >>>> Instituto Nacional de Seguro Social (INSS).</p>
+            <p><strong>22.</strong> Exagerar é cem milhões de vezes pior do que a moderação.</p>
+            <p><strong>23.</strong> Evite mesóclises, isto é, pronomes no meio de um verbo. Repita comigo: “Mesóclises: evitá-las-ei!”.</p>
+            <p><strong>24.</strong> Os números, em geral, devem ser escritos por extenso, exceção feita às datas (dia e ano) ou ao assunto
+            que assim o exigir, como, por exemplo, cifras e contas que se referem a operações matemáticas.</p>
+            <p><strong>25.</strong> Não abuse das exclamações! Nunca!!!!! O seu texto fica horrível!!!!!</p>
+            <p><strong>26.</strong> Evite frases exageradamente longas e sem pontuação pois estas dificultam a compreensão da ideia
+            nelas contida e por conterem mais que uma ideia central o que nem sempre torna o seu conteúdo
+            acessível forçam desta forma o pobre leitor a separá-la nos seus diversos componentes de forma a
+            torná-las compreensíveis o que não deveria ser afinal de contas parte do processo da leitura hábito que
+            devemos estimular através do uso de frases curtas e devidamente pontuadas.</p>
+            <p><strong>27.</strong> Cuidado com a hortografia para não estruprar a língua portuguesa.</p>
+            <p><strong>28.</strong> Seja específico, coeso e coerente.</p>
+            <p><strong>29.</strong> Não fique escrevendo (nem falando) no gerúndio. Você vai estar deixando seu texto pobre e estar
+            causando ambiguidade. Com certeza, você vai estar deixando o seu texto esquisito, vai estar ficando
+            com a sensação de que as coisas estão ainda acontecendo e tudo ao mesmo tempo. E como você vai
+            estar lendo este texto, tenho certeza que você vai estar prestando atenção e vai estar repassando aos
+            seus amigos, que vão estar entendendo e vão estar pensando em não estar falando e nem escrevendo
+            desta maneira irritante.</p>
+            <p><strong>30.</strong> Outra barbaridade que tu deves evitar tchê, é usar expressões que acabem por denunciar a região
+            onde tu moras! ... nada de mandar esse trem .... vixi... entendeu, bichinho, meu querido lindo?</p>
+            <p><strong>31.</strong> Não permita que seu texto acabe por rimar porque senão ninguém irá aguentar, já que é insuportável
+            o mesmo final escutar, o tempo todo sem parar.</p>
+            <p><strong>32.</strong> Não abusar do emprego da partícula “que” que eu tinha falado que eu tinha escutado que você tinha
+            ido para a Europa que um conhecido seu que é cantor de ópera lhe convidou.</p>
+            <p><strong>33.</strong> “ONDE” só pode ser empregado quando o antecedente for lugar. A cidade ONDE nasci é muito calma.</p>
+            <p>
+                <span class="text-italicf"><strong>FONTES:</strong> Professores Antonio Fernando de Almeida e Valéria Silva Rosa de Almeida – Universidade São Francisco (USF) – Campus Itatiba. Professor João Pedro – Universidade de Campinas (Unicamp).</span>
+            </p>
+        </div>
+        <p>
+            <span class="text-italicf"><strong>FONTES:</strong> USF, 2024.</span>
+        </p>
+    </section>
+    <section id="secao3" class="secao1">
+        <h1>3. PLEONASMOS</h1>
+        <p>
+            Cuidado com os <strong>pleonasmos.</strong> Eles constituem vícios de linguagem, embora alguns sejam usados
+            legitimamente para dar vigor à frase, empregados por escritores famosos. Em “Os Lusíadas”, Camões
+            se utilizou dessa figura de linguagem: “Vi claramente visto o lume vivo”. Os exemplos abaixo, no entanto,
+            constituem vícios de linguagem:
+        </p>
+        <!-- Quadro com borda violeta -->
+        <h2 class="titulo-quadrov"><span class="text-green">Quadro 1.</span> Exemplos de vícios de linguagem</h2>
+        <div class="quadrov">
+            <!-- Imagem via link -->
+            <img src="https://res.cloudinary.com/di4ria1pf/image/upload/v1742488761/pywgolhwijifwfihgul8.png"
+                alt="Descrição da imagem" class="imagem-quadrov" onclick="openModal(this)">
+            <!-- Fonte da imagem -->
+            <p><span class="text-italicf"><strong>Fonte:</strong> USF, 2025.</span></p>
+        </div>
+        <!-- Modal para exibir a imagem ampliada -->
+        <div id="imageModal" class="modal" onclick="closeModal()">
+            <span class="close">&times;</span>
+            <img class="modal-content" id="modalImg">
+        </div>
+        <p>
+            Não poderia encerrar esta unidade sem revisar e alertar a você sobre a importância da pontuação. Verifique
+            como uma vírgula pode mudar as ideias.
+        </p><br>
+        <div class="quadrov">
+            <!-- Imagem via link -->
+            <img src="https://res.cloudinary.com/di4ria1pf/image/upload/v1742488816/pu4xanmlmv3rmx5pamsq.png"
+                alt="Descrição da imagem" class="imagem-quadrov" onclick="openModal(this)">
+            <!-- Fonte da imagem -->
+        </div>
+    </section>
+    <!-- Contêiner externo para definir a cor de fundo -->
+    <section class="outer-background">
+        <!-- Seção Saiba Mais - Retângulo de Fundo -->
+        <section class="background-section">
+            <!-- Círculo Verde -->
+            <div class="circle-green">
+                <!-- Círculo Branco com ícone -->
+                <div class="circle-white">
+                    <i class='bx bx-book-reader'></i>
+                </div>
+            </div>
+            <div class="transparent-section">
+                <h1 class="learn-more-title">SAIBA MAIS</h1>
+                <p class="learn-more-paragraph">
+                    A Professora Teresa Cristina compartilha dicas valiosas para quem deseja aprimorar a escrita em
+                    textos acadêmicos e profissionais. Aprenda a estruturar e comunicar suas ideias com precisão,
+                    assistindo o vídeo.
+                    <br><br>
+                    <strong>Quer saber como escrever bem?</strong> | Professora Teresa Cristina
+                </p>
+                <!-- Ícone de Play -->
+                <div class="play-icon" data-video="https://www.youtube.com/embed/JhJkazC3nzk?si=chG3HdhOCwnJdvc2"
+                    onclick="openVideoModal(this)">
+                    <i class='bx bx-play-circle'></i>
+                </div>
+            </div>
+            <!-- Modal com o vídeo -->
+            <div id="videoModal" class="video-modal" onclick="closeVideoModal()">
+                <div class="video-content" onclick="event.stopPropagation()">
+                    <i class="bx bxs-x-circle close-btn" onclick="closeVideoModal()"></i>
+                    <iframe id="videoIframe" width="800" height="450" src="" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen>
+                    </iframe>
+                </div>
+            </div>
+        </section>
+    </section>
+    <!-- Seção Conclusão -->
+    <section id="conclusao" class="conclusao">
+        <!-- Conteúdo -->
+        <div class="conteudo-conclusao">
+            <div class="caixa-texto">
+                <h1 class="titulo-conclusao">CONCLUSÃO</h1>
+                <p>
+                    A prática da escrita transcende a simples manipulação de palavras e frases; ela nos conecta ao nosso
+                    próprio pensamento e nos permite estabelecer pontes com outras pessoas. Ao longo desta unidade, vimos
+                    como a escrita pode ser tanto um desafio quanto uma oportunidade de crescimento, exigindo esforço e
+                    disciplina, mas também oferecendo prazer e realização.
+                </p>
+                <p>
+                    Aprofundar-se nas nuances da produção textual é essencial para estudantes e profissionais que desejam se
+                    destacar em um mundo cada vez mais orientado pela comunicação eficaz. Com as estratégias abordadas,
+                    esperamos que você se sinta mais confiante para enfrentar a folha em branco e transformar suas ideias
+                    em textos significativos, respeitando as normas da língua portuguesa e, ao mesmo tempo, explorando sua
+                    própria criatividade. Afinal, a escrita é um exercício constante de aperfeiçoamento que nos torna melhores
+                    a cada palavra escrita.
+                </p>
+    
+            </div>
+        </div>
+        <div id="download" class="download-section">
+            <a href="" class="download-btn">
+                Baixar PDF <i class="fas fa-download"></i> <!-- Ícone de download -->
+            </a>
+        </div>
+    </section>
+    <!-- Seção Referências-->
+    <section id="referencias" class="referencias">
+        <div class="conteudo-referencias">
+            <div class="caixa-texto">
+                <h1 class="titulo-referencias">REFERÊNCIAS</h1>
+                <p>
+                    BATISTA, A. A. G. Usos sociais da língua escrita. <strong>Glossário Ceale</strong>, [s.d.]. Disponível em: http://ceale.fae.
+                    ufmg.br/app/webroot/glossarioceale/verbetes/usos-sociais-da-lingua-escrita. Acesso em: 07 fev. 2021.
+                </p>
+                <p>
+                    CAMARA JR., Joaquim Mattoso. <strong>Manual de expressão oral & escrita</strong>. 7. ed. Petrópolis: Vozes, 1983.
+                </p>
+                <p>
+                    TEBEROSKY, Ana. <strong>Aprendendo a escrever</strong>. Editora Ática, 2015.
+                </p>
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+        <p>Copyright © de Universidade São Francisco</p>
+        <hr class="footer-divider">
+        <span class="fonte-menor">Todos os direitos reservados. Este ebook ou
+            qualquer parte dele não pode ser reproduzido ou usado em quaisquer formas (eletrônico,
+            gravação, fotocópia, distribuição pela Internet ou outros) sem autorização
+            expressa, por escrito, da <strong>Universidade São Francisco.</strong></span>
+    </footer>
+<script>
+    // Navbar
+        document.querySelector('.menu-toggle').addEventListener('click', () => {
+            const menu = document.querySelector('.navbar ul');
+            const icons = document.querySelectorAll('.menu-toggle i'); // Seleciona ambos os ícones
+
+            menu.classList.toggle('show'); // Alterna a visibilidade do menu
+
+            // Alterna entre o ícone de abrir (menu) e o ícone de fechar (x)
+            icons[0].style.display = icons[0].style.display === 'none' ? 'block' : 'none'; // Mostra ou esconde o ícone de menu
+            icons[1].style.display = icons[1].style.display === 'none' ? 'block' : 'none'; // Mostra ou esconde o ícone de fechar
+        });
+        // Fechar o menu ao clicar em um link
+        const links = document.querySelectorAll('.navbar ul li a');
+        links.forEach(link => {
+            link.addEventListener('click', () => {
+                const menu = document.querySelector('.navbar ul');
+                const icons = document.querySelectorAll('.menu-toggle i');
+
+                // Fecha o menu ao clicar no link
+                menu.classList.remove('show');
+                icons[0].style.display = 'block'; // Exibe o ícone de menu
+                icons[1].style.display = 'none'; // Esconde o ícone de fechar
+            });
+        });
+        // Captura o elemento navbar
+        const navbar = document.querySelector('.navbar');
+
+        // Função que altera a opacidade da navbar
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) { // Quando o scroll for maior que 50px
+                navbar.style.backgroundColor = 'rgba(159, 67, 190, 0.8)'; // Opacidade 80%
+            } else {
+                navbar.style.backgroundColor = '#9F43BE'; // Cor original sem transparência
+            }
+        });
+    // Função para abrir o modal com o vídeo
+        function openVideoModal(element) {
+            var videoModal = document.getElementById('videoModal');
+            var iframe = document.getElementById('videoIframe');
+
+            // Obtém o link do vídeo do atributo 'data-video' do ícone de play clicado
+            var videoLink = element.getAttribute("data-video");
+
+            // Define o src do iframe com o link do vídeo
+            iframe.src = videoLink;
+
+            // Exibe o modal
+            videoModal.style.display = "flex";
+        }
+
+        // Função para fechar o modal
+        function closeVideoModal() {
+            var videoModal = document.getElementById('videoModal');
+            var iframe = document.getElementById('videoIframe');
+
+            // Limpa o vídeo (remove a URL para evitar que o vídeo continue tocando)
+            iframe.src = "";
+            videoModal.style.display = "none";  // Fecha o modal
+        }
+
+        // Impede o fechamento do modal quando o clique for dentro do modal de vídeo
+        document.getElementById('videoModal').addEventListener('click', function (event) {
+            // Apenas fecha o modal se o clique for fora da área de conteúdo (ou seja, na área preta)
+            if (event.target === this) {
+                closeVideoModal();
+            }
+        });
+        function initializeSlider(sliderSelector) {
+                const sliderContainer = document.querySelector(sliderSelector);
+                const slider = sliderContainer.querySelector('.slider');
+                const slides = sliderContainer.querySelectorAll('.slide');
+                const leftArrow = sliderContainer.querySelector('.left-arrow');
+                const rightArrow = sliderContainer.querySelector('.right-arrow');
+                let currentIndex = 0;
+
+                function showSlide(index) {
+                    const totalSlides = slides.length;
+
+                    if (index < 0) {
+                        currentIndex = totalSlides - 1;
+                    } else if (index >= totalSlides) {
+                        currentIndex = 0;
+                    } else {
+                        currentIndex = index;
+                    }
+
+                    slider.style.transform = `translateX(-${currentIndex * 100}%)`;
+                }
+
+                leftArrow.addEventListener('click', () => showSlide(currentIndex - 1));
+                rightArrow.addEventListener('click', () => showSlide(currentIndex + 1));
+
+                // Inicializa o slider
+                showSlide(currentIndex);
+            }
+
+            // Exemplo de inicialização de sliders
+            initializeSlider('.slider-container'); // Slider 1
+            initializeSlider('.slider-container-2'); // Slider 2
+            // Abrir modal ao clicar na imagem
+                function openModal(imgElement) {
+                    let modal = document.getElementById("imageModal");
+                    let modalImg = document.getElementById("modalImg");
+
+                    modal.style.display = "flex";
+                    modalImg.src = imgElement.src;
+                }
+
+                // Fechar modal ao clicar no fundo ou no botão "X"
+                function closeModal() {
+                    document.getElementById("imageModal").style.display = "none";
+                }
+</script>
+</body>
+</html>
