@@ -465,7 +465,7 @@
             border-radius: 10px; /* Cantos arredondados */
             padding: 20px; /* Espaçamento interno */
             width: 90%;
-            max-width: 800px; /* Limite de largura */
+            max-width: 700px; /* Limite de largura */
             margin: 20px auto; /* Centralizar */
         }
         .container-box p {
@@ -480,7 +480,21 @@
             justify-content: space-between;
             gap: 20px; /* Espaço entre os elementos */
         }
+        /* Garantir que a fonte fique abaixo da imagem */
+        .imagem-wrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* Centraliza a imagem e a fonte */
+        }
 
+        /* Ajustar a posição da fonte abaixo da imagem */
+        .fonte-imagem {
+            font-size: 12px !important;
+            color: #555;
+            text-align: center;
+            margin-top: 5px; /* Pequeno espaçamento entre a imagem e a fonte */
+            display: block;
+        }
         /* Imagem */
         .content img {
             width: 350px; /* Ajuste do tamanho da imagem */
@@ -501,10 +515,10 @@
 
         /* Descrição abaixo da imagem */
         .description {
-            font-family: 'Roboto', sans-serif;
-            font-size: 14px;
-            margin-top: 10px;
-            text-align: justify; /* Melhor alinhamento */
+            font-family: 'Roboto', sans-serif !important;
+            font-size: 14px !important;
+            margin-top: 10px !important;
+            text-align: justify !important; /* Melhor alinhamento */
         }
 
         /* 🔹 Responsividade 🔹 */
@@ -1308,11 +1322,14 @@
         </p>
         <div class="container-box">
             <div class="content">
-                <img src="https://res.cloudinary.com/di4ria1pf/image/upload/v1742407763/e68iwbewdx28l9vsr9lq.jpg"
-                    alt="Imagem representativa">
+                <div class="imagem-wrapper">
+                    <img src="https://res.cloudinary.com/di4ria1pf/image/upload/v1742407763/e68iwbewdx28l9vsr9lq.jpg"
+                        alt="Imagem representativa">
+                    <p class="fonte-imagem"><strong>FONTE:</strong> 123RF</p>
+                </div>
                 <p class="textimg">
                     É preciso, realmente, que nós percebamos algum <strong>sentido
-                    em escrever</strong>, que pode ser desde afirmar nossas ideias
+                        em escrever</strong>, que pode ser desde afirmar nossas ideias
                     e posições sobre determinado tema, produzir trabalhos
                     adequados ao pedido do curso escolhido na universidade,
                     reivindicar algo que nos é de direito, até saber que estamos
@@ -1320,11 +1337,15 @@
                     contrário, não há vontade e empenho que sobrevivam...
                 </p>
             </div>
-            <p><span class="description"><strong>FONTE:</strong> 123RF</span></p>
-            <p><span class="description"><strong>Descrição da imagem:</strong> A imagem mostra um grupo de estudantes em uma biblioteca ou sala de estudos. A estudante
-            em primeiro plano, vestindo um cardigã azul e óculos, está sorrindo enquanto escreve em seu caderno. Atrás dela, outros
-            alunos estão focados em suas atividades, alguns usando dispositivos eletrônicos e outros escrevendo. O ambiente é
-            iluminado e ao fundo há prateleiras com livros.</span>
+            <br>
+            <p class="description">
+                <strong>Descrição da imagem:</strong> A imagem mostra um grupo de estudantes em uma biblioteca ou sala de
+                estudos. A estudante
+                em primeiro plano, vestindo um cardigã azul e óculos, está sorrindo enquanto escreve em seu caderno. Atrás dela,
+                outros
+                alunos estão focados em suas atividades, alguns usando dispositivos eletrônicos e outros escrevendo. O ambiente
+                é
+                iluminado e ao fundo há prateleiras com livros.
             </p>
         </div>
         <p>
@@ -1342,26 +1363,32 @@
         </p>
         <div class="container-box">
             <div class="content">
-                <img src="https://res.cloudinary.com/di4ria1pf/image/upload/v1742408138/xqh99pa6ud4p37yl0hi2.jpg"
-                    alt="Imagem representativa">
+                <div class="imagem-wrapper">
+                    <img src="https://res.cloudinary.com/di4ria1pf/image/upload/v1742408138/xqh99pa6ud4p37yl0hi2.jpg"
+                        alt="Imagem representativa">
+                    <p class="fonte-imagem"><strong>FONTE:</strong> 123RF</p>
+                </div>
                 <p class="textimg">
                     Qualquer um de nós é capaz de escrever sobre um
                     assunto. Não há um jeito especial para redigir, ao
                     contrário do que muita gente pensa. Há apenas uma
                     <strong>falta de preparação inicial, que o esforço e a prática
-                    vencem</strong>. Por outro lado, a arte de escrever, na medida
+                        vencem</strong>. Por outro lado, a arte de escrever, na medida
                     em que consolida nossa capacidade de expressão do
                     pensar e do sentir, tem de firmar raízes na nossa própria
                     personalidade e decorre, em grande parte, de um trabalho
                     nosso para desenvolver a personalidade por este ângulo.
                 </p>
             </div>
-            <p><span class="description"><strong>FONTE:</strong> 123RF</span></p>
-            <p><span class="description"><strong>Descrição da imagem:</strong> A imagem mostra um grupo de quatro jovens sentados lado a lado em uma sala de aula. Todos
-            estão concentrados, escrevendo em folhas de papel, sugerindo que estão realizando uma atividade como uma prova
-            ou exercício. No primeiro plano, à esquerda, um jovem com barba está focado no que escreve. Ao lado dele, mais ao
-            centro, uma jovem loira também lê atentamente o papel, enquanto os outros dois jovens ao fundo mantêm a mesma
-            postura de concentração. O ambiente é iluminado e organizado, caracterizando um contexto educacional.</span>
+            <br>
+            <p class="description">
+                <strong>Descrição da imagem:</strong> A imagem mostra um grupo de quatro jovens sentados lado a lado em uma sala
+                de aula. Todos
+                estão concentrados, escrevendo em folhas de papel, sugerindo que estão realizando uma atividade como uma prova
+                ou exercício. No primeiro plano, à esquerda, um jovem com barba está focado no que escreve. Ao lado dele, mais
+                ao
+                centro, uma jovem loira também lê atentamente o papel, enquanto os outros dois jovens ao fundo mantêm a mesma
+                postura de concentração. O ambiente é iluminado e organizado, caracterizando um contexto educacional.
             </p>
         </div>
         <p>
